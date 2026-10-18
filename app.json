@@ -7,9 +7,11 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.almanac.mobilechatapp"
     },
     "android": {
+      "package": "com.almanac.mobilechatapp",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -28,6 +30,12 @@
       "eas": {
         "projectId": "9dc07bb8-5d97-43e7-98f2-e450760d37a8"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/9dc07bb8-5d97-43e7-98f2-e450760d37a8"
     }
   }
 }

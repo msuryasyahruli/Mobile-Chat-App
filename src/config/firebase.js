@@ -9,13 +9,13 @@ import { getFirestore } from "firebase/firestore";
 
 // Konfigurasi dari project Firebase Anda
 const firebaseConfig = {
-  apiKey: "AIzaSyB9wAacldjlr6MgLT4-LwA0y8qh9qzwZNQ",
-  authDomain: "baceoo.firebaseapp.com",
-  projectId: "baceoo",
-  storageBucket: "baceoo.firebasestorage.app",
-  messagingSenderId: "1079011661015",
-  appId: "1:1079011661015:web:e2f107aaa2e3ea0b218c92",
-  measurementId: "G-8MPV1LP3Q3",
+  apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
 // Mencegah inisialisasi ganda saat Fast Refresh
