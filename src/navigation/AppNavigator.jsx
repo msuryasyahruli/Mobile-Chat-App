@@ -20,6 +20,7 @@ export default function AppNavigator({ currentUser }) {
         headerTitleStyle: { fontWeight: "bold" },
         headerBackTitleVisible: false,
         animation: "slide_from_right",
+        statusBarStyle: "inverted",
       }}
     >
       {currentUser ? (
@@ -47,6 +48,7 @@ export default function AppNavigator({ currentUser }) {
               headerTransparent: true,
               headerStyle: { backgroundColor: "transparent" },
               headerTintColor: "#000",
+              statusBarStyle: "dark",
             })}
           />
 

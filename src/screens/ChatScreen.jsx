@@ -380,7 +380,7 @@ export default function ChatScreen({ route, navigation }) {
   };
 
   return (
-    <SafeAreaView style={styles.safeArea} edges={["left", "right", "bottom"]}>
+    <SafeAreaView style={styles.safeArea} edges={["bottom"]}>
       <KeyboardAvoidingView
         style={styles.container}
         behavior={Platform.OS === "ios" ? "padding" : "height"}

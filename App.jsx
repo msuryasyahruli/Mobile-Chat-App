@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, ActivityIndicator, StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./src/config/firebase";
 import AppNavigator from "./src/navigation/AppNavigator";
@@ -30,18 +29,13 @@ export default function App() {
   }
 
   return (
-    <SafeAreaView style={styles.safeArea} edges={["bottom"]}>
-      <NavigationContainer>
-        <AppNavigator currentUser={currentUser} />
-      </NavigationContainer>
-    </SafeAreaView>
+    <NavigationContainer>
+      <AppNavigator currentUser={currentUser} />
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-  },
   loadingContainer: {
     flex: 1,
     justifyContent: "center",

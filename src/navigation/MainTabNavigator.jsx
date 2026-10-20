@@ -1,6 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 // Screens
 import HomeScreen from "../screens/HomeScreen";
@@ -10,6 +11,7 @@ import SettingScreen from "../screens/SettingScreen";
 const Tab = createBottomTabNavigator();
 
 export default function MainTabNavigator() {
+  const insets = useSafeAreaInsets();
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -28,13 +30,6 @@ export default function MainTabNavigator() {
         },
         tabBarActiveTintColor: "#007AFF",
         tabBarInactiveTintColor: "#8E8E93",
-        tabBarStyle: {
-          backgroundColor: "#FFFFFF",
-          borderTopColor: "#E5E7EB",
-          height: 60,
-          paddingBottom: 8,
-          paddingTop: 6,
-        },
         headerStyle: { backgroundColor: "#007AFF" },
         headerTintColor: "#fff",
         headerTitleStyle: { fontWeight: "bold" },
@@ -53,7 +48,6 @@ export default function MainTabNavigator() {
         component={ProfileScreen}
         options={{
           title: "Profile",
-          tabBarLabel: "Profile",
         }}
       />
       <Tab.Screen
@@ -61,7 +55,6 @@ export default function MainTabNavigator() {
         component={SettingScreen}
         options={{
           title: "Settings",
-          tabBarLabel: "Settings",
         }}
       />
     </Tab.Navigator>
